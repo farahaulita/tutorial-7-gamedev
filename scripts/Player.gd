@@ -2,7 +2,7 @@ extends KinematicBody
 
 export var speed = 10
 export var crouch_speed = 5
-export var sprint_speed = 15
+export var sprint_speed = 20
 export var acceleration = 5
 export var gravity = 0.98
 export var jump_power = 30
@@ -62,7 +62,7 @@ func _physics_process(delta):
 	
 	var current_speed = speed
 	
-	if Input.is_action_pressed("sprint") and !crouch:
+	if sprint:
 		current_speed = sprint_speed
 	elif crouch:
 		current_speed = crouch_speed
