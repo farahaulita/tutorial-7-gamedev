@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/World 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/GoalArea.tscn" type="PackedScene" id=3]
+
+[node name="Level 1" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+
+[node name="World 1" parent="." instance=ExtResource( 2 )]
+
+[node name="Area Trigger" parent="." instance=ExtResource( 3 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 20, 45.1393, 7.37281, -1.08712 )
+sceneName = "WinScreen"
+
+[node name="Area Trigger2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 12.7081, 0, 15.4436, 0, 0, 0, -15.4436, 0, 12.7081, 40, -30, 0 )
