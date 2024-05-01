@@ -35,12 +35,14 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	if Input.is_action_just_pressed("crouch"):
+		$Head.scale.y = 0.7
 		crouch = 1
 	
 	if Input.is_action_just_pressed("sprint"):
 		sprint = 1
 	
 	if Input.is_action_just_released("crouch"):
+		$Head.scale.y = 1
 		crouch = 0
 	if Input.is_action_just_released("sprint"):
 		sprint = 0
